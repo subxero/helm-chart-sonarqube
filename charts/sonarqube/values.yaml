@@ -344,7 +344,7 @@ resources:
     memory: 2Gi
 
 persistence:
-  enabled: false
+  enabled: true
   ## Set annotations on pvc
   annotations: {}
 
@@ -360,7 +360,7 @@ persistence:
   ##
   storageClass:
   accessMode: ReadWriteOnce
-  size: 5Gi
+  size: 1Gi
   uid: 1000
 
   ## Specify extra volumes. Refer to ".spec.volumes" specification : https://kubernetes.io/fr/docs/concepts/storage/volumes/
@@ -442,7 +442,7 @@ postgresql:
   persistence:
     enabled: true
     accessMode: ReadWriteOnce
-    size: 20Gi
+    size: 1Gi
     storageClass:
   securityContext:
     # For standard Kubernetes deployment, set enabled=true
